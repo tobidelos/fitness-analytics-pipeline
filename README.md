@@ -1,4 +1,4 @@
-# 🚀 Fitness Data Pipeline (ETL & EDA)
+# 🚀 Fitness data pipeline (ETL & EDA)
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
@@ -7,7 +7,7 @@
 
 Un pipeline analítico de extremo a extremo (End-to-End) diseñado con estándares de **Ingeniería de datos** y **Arquitectura de software** para procesar, limpiar y analizar datos de rendimiento físico y nutricional.
 
-## 💼 Problema de negocio y aplicación corporativa
+## Problema de negocio y aplicación corporativa
 
 A nivel empresarial (especialmente en industrias como **Salud, Bienestar, Seguros de Vida, IoT y Wearables**), este desarrollo resuelve problemas críticos de toma de decisiones basadas en datos:
 
@@ -20,7 +20,7 @@ Para emular los retos de un entorno corporativo real, los datos de este proyecto
 *   **Decisiones basadas en evidencia, no en intuición**: Mediante el módulo EDA (Exploratory Data Analysis), el sistema ejecuta pruebas estadísticas rigurosas (Welch's T-Test y correlaciones de Pearson). Esto permite a una empresa saber, por ejemplo, si existe causalidad matemática entre la falta de sueño de los usuarios y una caída en su rendimiento (útil para personalizar recomendaciones o ajustar primas de seguros).
 *   **Democratización del dato (BI)**: Finalmente, inyecta los datos refinados en un Data Warehouse relacional (SQLite) y los expone a través de un **Dashboard interactivo**. Esto permite que stakeholders no-técnicos (gerentes, product managers) consuman los insights de forma visual y en tiempo real.
 
-## 🏗️ Arquitectura del proyecto
+## Arquitectura del proyecto
 
 El flujo se divide en fases orquestadas modularmente, separando la lógica funcional (en `src/`) del almacenamiento de estado (en `data/`).
 
@@ -37,13 +37,13 @@ graph TD
     I -->|Streamlit App| J[Web Interface]
 ```
 
-## 🛠️ Tecnologías y complejidad
+## Tecnologías y complejidad
 - **Eficiencia espacial/temporal**: Todo el pipeline fue diseñado utilizando operaciones vectorizadas (`numpy`, `pandas`) para lograr complejidad temporal **O(1)** a nivel de iterador de Python (O(n) nativo en C), evitando el uso de costosos bucles `for`.
 - **Estructura modular**: Implementación de Separation of Concerns (SoC) con `config.py` y `logger.py` unificados.
 - **Formato parquet**: Utilizado durante la transición de fases por su alta eficiencia de compresión y preservación de tipos estáticos respecto a formatos planos como CSV.
 - **Testing**: Integración continua mediante validación de transformaciones clave con `pytest`.
 
-## 📁 Estructura del repositorio
+## Estructura del repositorio
 
 ```text
 .
@@ -63,7 +63,7 @@ graph TD
 └── run.bat                   # Ejecutable rápido para Windows
 ```
 
-## 🚀 Cómo ejecutar el proyecto
+## Cómo ejecutar el proyecto
 
 Existen dos formas de desplegar el proyecto: usando contenedores (recomendado para entornos de producción/evaluación) o mediante instalación local clásica.
 
@@ -117,4 +117,7 @@ streamlit run src/dashboard.py
 ```
 
 ---
+<p align="center" style="font-size: 12px; color: gray;">
+  Desarrollado por <a href="https://github.com/tobidelos" target="_blank" style="font-weight: bold; color: #6366f1;">ttobidelos</a>
+</p>
 
