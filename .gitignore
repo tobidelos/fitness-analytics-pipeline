@@ -1,0 +1,25 @@
+# Archivos generados y bases de datos
+data/
+!data/.gitkeep
+*.csv
+*.parquet
+*.db
+*.sqlite3
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos propios del usuario
+prompt.md
+
+# Caché de Python y Tests
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# SO
+.DS_Store
+Thumbs.db

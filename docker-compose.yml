@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  etl_pipeline:
+    build: .
+    container_name: fitness_etl
+    command: python main.py
+    volumes:
+      # Mapea la carpeta data local para persistir SQLite y Parquet
+      - ./data:/app/data
+    profiles:
+      - etl  # Se ejecuta solo si se invoca explícitamente o con el profile
+
+  dashboard:
+    build: .
+    container_name: fitness_dashboard
+    command: streamlit run src/dashboard.py
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - etl_pipeline
