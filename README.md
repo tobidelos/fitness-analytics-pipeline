@@ -67,7 +67,7 @@ graph TD
 
 Existen dos formas de desplegar el proyecto: usando contenedores (recomendado para entornos de producción/evaluación) o mediante instalación local clásica.
 
-### Opción A: Despliegue universal con docker (Recomendado) 🐳
+### Opción A: Despliegue universal con docker (Recomendado) 
 Este método garantiza reproducibilidad absoluta, encapsulando dependencias y el sistema operativo. Requiere [Docker](https://www.docker.com/) instalado.
 
 1. **Levantar todos los servicios**:
